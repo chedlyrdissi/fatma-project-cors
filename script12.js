@@ -8,7 +8,7 @@ async function fetchData(url) {
 			redirect: 'follow',
 		};
 
-		fetch(url, requestOptions)
+		fetch(`http://cors.io/?${url}`, requestOptions)
 		  .then(response => response.text())
 		  .then(result => resolve(result))
 		  .catch(error => reject(error));
